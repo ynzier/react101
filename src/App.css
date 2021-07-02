@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .App-logo {
@@ -37,30 +42,74 @@
   }
 }
 
+.input {
+  margin-bottom: 1rem;
+}
+
 .btn-submit {
-  background-color: pink;
-  padding: 0rem;
+  padding: 0.5rem 1rem;
   border-radius: 12px;
 }
 
 .form {
   width: 600px;
-  height: 600px;
-  background-color: pink;
+  /* height: 600px; */
   display: flex;
   flex-direction: column;
-}
-
-#email {
+  background-color: #f0f0f0;
   padding: 1rem;
 }
 
-.card {
-  background-color: plum;
+#email {
+  padding: 16px;
+}
 
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
+  gap: 1rem;
+}
+
+.card {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
+  width: 200px;
+  border-radius: 10px;
+  /* background-color: #f1f1f1; */
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  min-height: 200px;
+}
+
+.card .box-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+input {
+  /* padding: 1rem; */
+  font-size: 2rem;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.inputbox {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
 }
